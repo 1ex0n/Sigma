@@ -1,0 +1,548 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+body {
+	font-family: 'Lato', sans-serif;
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 1.5;
+	color: #424242;
+}
+
+/* Utility */
+
+.none {
+	display: none !important;
+}
+
+.visually-hidden {
+	position: absolute;
+	opacity: 0;
+	visibility: hidden;
+	width: 0px;
+	height: 0px;
+	display: block;
+	margin-left: -10000px;
+	background: transparent;
+	font-size: 0;
+}
+/*--------------------*/
+
+.container {
+	width: 1400px;
+	padding-left: 15px;
+	padding-right: 15px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.container-wide {
+	width: 1536px;
+}
+
+/*--------------------*/
+
+.header {
+	padding-top: 17px;
+	padding-bottom: 17px;
+	border-bottom: 1px solid #D6D6D6 ;
+
+}
+.header-row {
+	display: flex;
+	align-items: center;
+}
+
+.header-nav {
+	margin: 0 0 0 172px;
+	font-weight: 500;
+	color: #292929;
+}
+
+.header-nav ul {
+	display: flex;
+}
+
+.header-nav li + li {
+	margin-left: 72px;
+}
+
+.header-nav a {
+	transition: color .25s ease;
+}
+
+.header-nav a:hover {
+	color: #01996D;
+}
+
+.header-login {
+	margin-left: auto;
+}
+
+.header-login > * + * {
+	margin-left: 35px;	
+}
+
+.header-login a {
+	color: #000;
+}
+
+.step-heading:hover,
+.header-login a:hover {
+	color: #01996D;
+	transition: color .25s ease;
+}
+
+.button, a.button {
+	height: 65px;
+	padding: 20px 50px;
+	background-color: #01996D;
+	color: #fff;
+	font-size: 20px;
+	font-weight: 400;
+	border: 1px solid #01996D;
+	border-radius: 4px;
+	transition: opacity .25s ease;
+}
+
+.button:hover, a.button:hover{
+	opacity: 0.8;
+	color: #fff;
+}
+
+.btn-sml, a.btn-sml {
+	height: 51px;
+	padding: 13px 50px;
+}
+
+.home {
+	position: relative;
+	padding: 175px 0;
+	min-height: 895px;
+}
+
+.home-content {
+	max-width: 440px;
+}
+
+.home-heading {
+	margin-bottom: 30px;
+	color: #01996D;
+	font-family: 'Georgia', serif;
+	font-weight: 700;
+	font-size: 65px;
+
+}
+.home-text {
+	max-width: 420px;
+	color: #484848;
+	line-height: 144.5%;
+}
+
+.home-text + * {
+	margin-top: 55px;
+}
+
+.home-bg-img {
+	z-index: -1;
+	position: absolute;
+	left: 193px;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	
+}
+
+.home-bg-img:after {
+	content: '';
+	position: absolute;
+	left: -193px;
+	top: 0;
+	width: 110%;
+	height: 100%;
+	background: linear-gradient(112.58deg, #FFFFFF 18.15%, rgba(255, 255, 255, 0) 53.07%), rgba(0, 0, 0, 0.1);
+}
+
+.home-bg-img img {
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+}
+/*--------------------*/
+
+.how-it-works {
+	padding: 169px 0 51px 0;
+}
+
+.how-it-works-header {
+	padding-bottom: 52px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.how-it-works-header-head {
+	max-width: 584px;
+	margin-right: 30px;
+}
+
+.how-it-works-title {
+	margin-bottom: -3px;
+	font-weight: 600;
+	font-size: 24px;
+	line-height: 157%;
+}
+
+.how-it-works-subtitle {
+	color: #01996D;
+	line-height: 157%;
+	font-weight: 700;
+	font-size: 50px;
+	font-family: 'Georgia', serif;
+}
+
+.how-it-works-header-content {
+	padding-top: 58px;
+	max-width: 671px;
+	line-height: 150%;
+	font-weight: 500;
+}
+
+.how-it-works-steps {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, 390px);
+	column-gap: 95px;
+}
+
+.step {
+	max-width: 392px;
+}
+
+.step:nth-child(2) {
+	padding-top: 287px;
+}
+
+.step:nth-child(3) {
+	padding-top: 54px;
+}
+
+.step-heading {
+	position: relative;
+	padding-top: 135px;
+	padding-left: 88px;
+	margin-bottom: 55px;
+	font-family: "Georgia", serif;
+	font-weight: 700;
+	font-size: 30px;
+	line-height: 150%;
+	color: #000;
+}
+
+.step-heading::before {
+	position: absolute;
+	left: 0;
+	top: 0;
+	content: attr(data-number);
+	font-weight: 400;
+	font-size: 150px;
+	line-height: 150%;
+	color: rgba(1, 153, 109, 0.2);
+}
+
+.step-text {
+	margin-bottom: 60px;
+	font-weight: 500;
+	font-size: 20px;
+	line-height: 150%;
+	color: #424242;
+}
+
+.step-img-wrapper {
+	position: relative;
+	background-color: #fff;
+	padding-bottom: 126%;
+}
+
+.step-img {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: 12px;
+}
+/*--------------------*/
+
+.story {
+	padding: 229px 0 176px;
+	background-color: #245852;
+	color: #fff;
+}
+
+.story-row {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.story-content {
+	margin-right: 30px;
+	max-width: 580px;
+}
+.story-heading {
+	margin-bottom: 33px;
+	font-size: 50px;
+	line-height: 157%;
+	font-weight: 700;
+	font-family: "Georgia", serif;
+}
+.story-text {
+	margin-bottom: 57px;
+	font-weight: 600;
+	font-size: 25px;
+	line-height: 157%;
+
+}
+
+.story-video {
+	width: 895px;
+	position: relative;
+}
+
+.story-video-object{
+	border-radius: 16px;
+}
+/*--------------------*/
+
+.product {
+	padding-top: 120px;
+	padding-bottom: 168px;
+}
+
+.product-row {
+	display: flex;
+	justify-content: space-between;
+}
+
+.product-img-wrapper {
+	position: relative;
+	margin-right: 86px;
+	padding-left: 60px;
+	padding-bottom: 74px;
+}
+
+.product-card {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
+
+.product-img {
+	border-radius: 18px;
+}
+
+.product-content {
+	max-width: 584px;
+}
+
+.product-content-title {
+	font-size: 25px;
+	font-weight: 600;
+	line-height: 157%;
+}
+
+.product-content-title + * {
+	margin-top: 10px;
+}
+
+.product-content-subtitle {
+	font-family: "Georgia", serif;
+	font-size: 50px;
+	font-weight: 700;
+	color:#01996D;
+	line-height: 157%;
+}
+
+.product-content-subtitle + * {
+	margin-top: 20px;
+}
+
+.product-content-text {
+	max-width: 530px;
+}
+
+.product-content-text + * {
+	margin-top: 40px;
+}
+
+
+.card {
+	background-color: #fff;
+	width: 296px;
+	border-radius: 4px;
+	box-shadow: 0px 3.62px 18.1px rgba(165, 165, 165, 0.25);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 28px 20px 30px;
+}
+
+.card-title {
+	position: relative;
+	font-weight: 600;
+	font-size: 14px;
+	line-height: 1;
+	padding-bottom: 12px;
+	margin-bottom: 13px;
+}
+
+.card-title::after {
+	content: '';
+	position: absolute;
+	background-color: #000;
+	height: 0.75px;
+	left: -7px;
+	right: -7px;
+	bottom: 0px;
+}
+
+.card-avatar {
+	margin-bottom: 25px;
+}
+
+.avatar {
+	text-align: center;
+}
+
+.avatar-img {
+	margin-bottom: 13px;
+	width: 57px;
+	height: 57px;
+	border-radius: 50%;
+	object-fit: cover;
+	
+}
+
+.avatar-name {
+	font-size: 12px;
+}
+
+.card-contents {
+	text-align: left;
+	padding-left: 6px;
+}
+
+.card-contents-title {
+	font-family: 'Georgia', serif;
+	font-size: 16px;
+	margin-bottom: 22px;
+	font-weight: 700;
+}
+
+.card ul {
+	width: 100%;
+	font-size: 11px;
+}
+
+.card ul li {
+	list-style-type: disc;
+}
+
+.card ul li + li {
+ 	margin-top: 20px;
+}
+/*--------------------*/
+.footer {
+	display: flex;
+	justify-content: space-between;
+	background-color: #245852;
+	color: #fff;
+	padding: 95px 0px 40px 0px;
+}
+
+.footer-content {}
+
+.footer-logo {
+	font-size: 40px;
+	font-weight: 800;
+	line-height: 54px;
+}
+
+.footer-logo + * {
+	margin-top: 60px;
+}
+
+.footer-nav {
+	font-size: 25px;
+	font-weight: 600;
+	line-height: 30px;
+}
+
+.footer-nav li + li {
+	margin-top: 60px;
+}
+
+.footer-nav a {
+	transition: opacity 0.2 ease;
+}
+
+.footer-nav a:hover {
+	opacity: 0.8;
+}
+
+.footer-discover {
+	display: inline-flex;
+	margin: 0px 0px 0px 475px;
+	height: 150px;
+	width: 1000px;
+}
+.footer-discover-social {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: flex-end;
+
+}
+
+.footer-discover-social div + * {
+	margin-left: 50px;
+}
+
+.round-button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: #fff;
+	height: 80px;
+	width: 80px;
+	border-radius: 50%;
+}
+
+.button-gradient {
+	background: conic-gradient(rgba(128, 164, 206, 1),
+	rgba(242, 137, 170, 1),
+	rgba(198, 139, 240, 1),
+	rgba(209, 100, 218, 1),
+	rgba(201, 99, 232, 1),
+	rgba(191, 194, 232, 1),
+	rgba(255, 201, 153, 1),
+	rgba(208, 216, 201, 1),
+	rgba(186, 208, 241, 1),
+	rgba(206, 216, 203, 1),
+	rgba(255, 255, 255, 0))
+}
+
+.footer-discover-store {
+	height: 142px;
+	margin-left: 230px;
+}
+.footer-discover-title {
+	font-family: 'Poppins', sans-serif;
+	font-weight: 500;
+	font-size: 20px;
+	line-height: 25px;
+	margin-bottom: 28px;
+	text-align: center;
+}
+.footer-discover-stores {
+	width: 100%;
+}
